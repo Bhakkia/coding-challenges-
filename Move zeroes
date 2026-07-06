@@ -1,0 +1,20 @@
+class Solution:
+    def moveZeroes(self, nums):
+        result = []
+          for i in nums:
+            if i != 0:
+                result.append(i)
+
+        # Count the number of zeroes
+        zero_count = len(nums) - len(result)
+
+        # Add zeroes at the end
+        result.extend([0] * zero_count)
+
+        return result
+obj = Solution()
+
+nums = [0, 1, 0, 3, 12]
+
+print("Original Array:", nums)
+print("Array after moving zeroes:", obj.moveZeroes(nums))
